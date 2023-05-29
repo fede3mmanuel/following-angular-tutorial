@@ -1,0 +1,56 @@
+<h2>Directivas</h2>
+<h3>Directivas de atributo</h3>
+
+<p [ngClass]="color == true ? 'text-1': 'text-2'">
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores eveniet ab fuga natus illo suscipit accusamus expedita. Commodi dignissimos maiores laborum eveniet cumque reiciendis, nesciunt vero repudiandae quasi odit natus!
+</p>
+
+<p [ngClass]="color == false ? 'text-1': 'text-2'">
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores eveniet ab fuga natus illo suscipit accusamus expedita. Commodi dignissimos maiores laborum eveniet cumque reiciendis, nesciunt vero repudiandae quasi odit natus!
+</p>
+
+<p [style.border]="border == true ? '2px solid black': '2px solid blue'">
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores eveniet ab fuga natus illo suscipit accusamus expedita. Commodi dignissimos maiores laborum eveniet cumque reiciendis, nesciunt vero repudiandae quasi odit natus!
+</p>
+
+<p [style.border]="border == false ? '2px solid black': '2px solid blue'">
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores eveniet ab fuga natus illo suscipit accusamus expedita. Commodi dignissimos maiores laborum eveniet cumque reiciendis, nesciunt vero repudiandae quasi odit natus!
+</p>
+
+<h3>Directivas estructurales</h3>
+
+<ol>
+    <li *ngFor="let pais of Lista">
+        {{pais}}
+    </li>
+</ol>
+
+<ol>
+    <li *ngFor="let pais of Lista">
+        <div *ngIf="pais == 'Argentina'">
+            {{pais}}
+        </div>
+        
+    </li>
+</ol>
+
+<div [ngSwitch]="Edad">
+    <div *ngSwitchCase="10">
+        Tu edad es 10
+    </div>
+    <div *ngSwitchCase="20">
+        Tu edad es 20
+    </div>
+    <div *ngSwitchCase="30">
+        Tu edad es 30
+    </div>
+    <div *ngSwitchDefault="">
+        Tu edad es otra
+    </div>
+</div>
+
+<h2>Pipes</h2>
+
+<p>{{Fecha}}</p>
+<p>{{Fecha | date}}</p>
+<p>{{Fecha | date:'dd/mm/yy'}}</p>
